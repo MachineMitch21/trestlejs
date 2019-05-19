@@ -1,6 +1,6 @@
 {
   "name": "@m_schutt/trestle",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Framework I'm creating to handle the dynamic nature of a social network client. It's currently not usable so if you see it, please do not try to use it.  Unless you want to contact me and help with development.  :)",
   "main": "./lib/index.js",
   "scripts": {

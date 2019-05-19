@@ -98,6 +98,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Eve
 
 /***/ }),
 
+/***/ "./lib/ContainerList.js":
+/*!******************************!*\
+  !*** ./lib/ContainerList.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _EventEmitter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EventEmitter */ \"./lib/EventEmitter.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ \"./node_modules/.registry.npmjs.org/lodash/4.17.11/node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nvar ContainerList = function ContainerList() {\n  this._containers = [];\n\n  lodash__WEBPACK_IMPORTED_MODULE_1___default.a.extend(this, new _EventEmitter__WEBPACK_IMPORTED_MODULE_0__[\"default\"]());\n\n  this.push = function (container) {\n    var len = this._containers.push(container);\n\n    this.emit('add', container);\n    return len;\n  };\n\n  this.unshift = function (container) {\n    var len = this._containers.unshift(container);\n\n    this.emit('add', container);\n    return len;\n  };\n\n  this.pop = function () {\n    var container = this._containers.pop();\n\n    this.emit('remove', container);\n    return container;\n  };\n\n  this.shift = function () {\n    var container = this._container.shift();\n\n    this.emit('remove', container);\n    return container;\n  };\n\n  this.each = function (callback) {\n    this._containers.forEach(function (container) {\n      callback(container);\n    });\n  };\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ContainerList);\n\n//# sourceURL=webpack:///./lib/ContainerList.js?");
+
+/***/ }),
+
 /***/ "./lib/EventEmitter.js":
 /*!*****************************!*\
   !*** ./lib/EventEmitter.js ***!
@@ -118,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction EventEmitter() {\n  
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Container__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Container */ \"./lib/Container.js\");\n/* harmony import */ var _EventEmitter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EventEmitter */ \"./lib/EventEmitter.js\");\n\n\nvar Trestle = {\n  Container: _Container__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  EventEmitter: _EventEmitter__WEBPACK_IMPORTED_MODULE_1__[\"default\"]\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Trestle);\n\n//# sourceURL=webpack:///./lib/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _EventEmitter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EventEmitter */ \"./lib/EventEmitter.js\");\n/* harmony import */ var _Container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Container */ \"./lib/Container.js\");\n/* harmony import */ var _ContainerList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ContainerList */ \"./lib/ContainerList.js\");\n\n\n\nvar Trestle = {\n  EventEmitter: _EventEmitter__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  Container: _Container__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  ContainerList: _ContainerList__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Trestle);\n\n//# sourceURL=webpack:///./lib/index.js?");
 
 /***/ }),
 
