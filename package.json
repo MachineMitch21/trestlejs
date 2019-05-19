@@ -1,0 +1,34 @@
+{
+  "name": "@m_schutt/trestle",
+  "version": "0.0.1",
+  "description": "Framework I'm creating to handle the dynamic nature of a social network client. It's currently not usable so if you see it, please do not try to use it.  Unless you want to contact me and help with development.  :)",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "mocha --require @babel/register",
+    "build": "webpack --mode production",
+    "build:dev": "webpack --watch --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MachineMitch21/trestlejs.git"
+  },
+  "keywords": [
+    "framework",
+    "client-side"
+  ],
+  "author": "Mitch Schutt",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/register": "^7.4.4",
+    "babel-loader": "^8.0.6",
+    "mocha": "^6.1.4",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  },
+  "dependencies": {
+    "assert": "^2.0.0",
+    "lodash": "^4.17.11"
+  }
+}
